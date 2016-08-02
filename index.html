@@ -16,12 +16,15 @@
   <div class="container">
     <div class="place">
       <h1></h1>
+      <button type="button" class="btn btn-success">Choose</button>
     </div>
   </div>
   <script>
     (function(d) {
-      var places = ['New Line', 'JTap', 'Bin 36'];
-      d.querySelector('.container h1').innerHTML = places[Math.floor(Math.random()*places.length)];
+      d.querySelector('button').addEventListener('click', function() {
+        var places = ['New Line', 'JTap', 'Bin 36', 'The magarita place that we went to that one time'];
+        d.querySelector('.container h1').innerHTML = places[Math.floor(Math.random()*places.length)];
+      });
     })(document);
   </script>
 </body>
